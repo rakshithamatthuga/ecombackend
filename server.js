@@ -1,7 +1,8 @@
 const express=require('express');
 const app=express();
-const chors=require('chors')
+const cors=require('cors')
 app.use(express.json());
+app.use(cors())
 const products=require('./db/products')
 const person=[{item:'Pants',price:24},{item:'Shoes',price:25}];
 app.get("/api/products",(request, response)=>{
